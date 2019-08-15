@@ -387,7 +387,7 @@
     /* ----- Countdown ----- */
     if($('#countdown').length){
         $('#countdown').timeTo({
-            timeTo: new Date(new Date('Thu Dec 15 2018 09:00:00 GMT+0600 (Bangladesh Standard Time)')),
+            timeTo: new Date(new Date('Sat Nov 23 2019 21:30:00 GMT-0300')),
             displayDays: 2,
             theme: "white",
             displayCaptions: true,
@@ -397,7 +397,7 @@
     }
     if($('.countdown').length){
         $('.countdown').timeTo({
-            timeTo: new Date(new Date('Thu Dec 15 2018 09:00:00 GMT+0600 (Bangladesh Standard Time)')),
+            timeTo: new Date(new Date('Sat Nov 23 2019 21:30:00 GMT-0300')),
             displayDays: 2,
             theme: "white",
             displayCaptions: true,
