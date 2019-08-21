@@ -203,8 +203,11 @@
     /* ----- FLIP CLOCK ----- */
     function flip_Clock() {
         var clock;    
-        var clock;
-        clock = $('.clock').FlipClock({
+        var date = new Date(2019, 10, 23, 21, 30);
+        var now = new Date();
+        var diff = (date.getTime()/1000) - (now.getTime()/1000);
+
+        clock = $('.clock').FlipClock(diff, {
             clockFace: 'DailyCounter',
             autoStart: false,
             callbacks: {
@@ -214,7 +217,6 @@
             }
         });
 
-        clock.setTime(8220880);
         clock.setCountdown(true);
         clock.start();
     }
@@ -227,7 +229,7 @@
                 center: 'title',
                 right: 'month,agendaWeek,agendaDay'
             },
-            defaultDate: '2018-05-22',
+            defaultDate: '2019-11-23',
             navLinks: true, // can click day/week names to navigate views
             selectable: true,
             selectHelper: true,
