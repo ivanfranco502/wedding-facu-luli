@@ -195,7 +195,8 @@
 	.fz60 {font-size: 44px;}
 	.fz48,.fz45 {font-size: 30px;}
 	.fz40 {font-size: 24px;}
-	h1 {font-size: 20px;}
+	h1 {font-size: 40px;}
+	.fecha h1 { font-size:50px;}
 	/* ExTra Class End*/
 	/* Hero Slider Nav */
 	.cd-slider-nav {
