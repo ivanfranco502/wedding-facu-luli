@@ -251,10 +251,10 @@
   // WEDDING RSVP FORM 3 SCRIPT
   // =====================
   $(function () {
-      $('#rsvp_form').validator();
-      $('#rsvp_form').on('submit', function (e) {
+      $('#rsvp_form3').validator();
+      $('#rsvp_form3').on('submit', function (e) {
           if (!e.isDefaultPrevented()) {
-              var url = "includes/rsvp3.php";
+              var url = "includes/send_form.php";
               $.ajax({
                   type: "POST",
                   url: url,
@@ -267,8 +267,8 @@
 
                       var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
                       if (messageAlert && messageText) {
-                          $('#rsvp_form').find('.messages').html(alertBox).fadeIn('slow');
-                          $('#rsvp_form')[0].reset();
+                          $('#rsvp_form3').find('.messages').html(alertBox).fadeIn('slow');
+                          $('#rsvp_form3')[0].reset();
                           setTimeout(function(){ $('.messages').fadeOut('slow') }, 6000);
                       }
                   }
