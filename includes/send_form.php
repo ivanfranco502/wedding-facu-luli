@@ -5,15 +5,14 @@ $result = 'Lamentablemente ha surgido un inconveniente en la confirmacion. Vuelv
 if(!empty($_POST)){
     
     $name = $_POST['form_name'];
-    $email = $_POST['form_email'];
-    $phone = $_POST['form_phone'];
-    $subject = $_POST['form_subject'];
-    $message = $_POST['form_message'];		
-
+    $option = $_POST['assists'];
+    $option2 = $_POST['people'];		
+    $option3 = $_POST['menu'];
+    
     $to      = $your_email;
-    $subject = 'Web casamiento contacto: '.$subject;
-    $headers = 'From: '.$name . ' - '.$email ."\r\n";
-    $message = 'New message from your wedding contact form: ' ."\r\n".'Name: '.$name."\r\n".'Email: '.$email."\r\n".'Phone: '.$phone."\r\n".'Message: '.$message;
+    $subject = 'Tarjeta casamiento: '.$name;
+    $headers = 'From: '.$name . "\r\n";
+    $message = 'New RSVP data sent from your website:'."\r\n".'Name: '.$name."\r\n".'Will attend: '.$option."\r\n".'People with: '.$option2."\r\n".'Will eat: '.$option3;
     
     if(mail($to, $subject, $message, $headers)){
         $result = 'Su confirmacion ha sido realizada, muchas gracias!';
